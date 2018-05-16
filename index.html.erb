@@ -1,0 +1,9 @@
+<%= render "util/nav"%>
+<h1>Subway Lines</h1>
+<ul>
+<% @lines.each do |line| %>
+  <li><%= link_to line.name, line %> </li>
+<%end%>
+</ul>
+
+<%= link_to "New Line", new_line_path%>

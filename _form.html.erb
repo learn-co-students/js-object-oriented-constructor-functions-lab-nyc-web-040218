@@ -1,0 +1,15 @@
+<% if flash[:errors] %>
+  <ul>
+    <%flash[:errors].each do |error| %>
+      <li><%= error %></li>
+    <% end %>
+  </ul>
+<%end%>
+
+<%= form_for @line do |f| %>
+  <%= f.label :name %>:<br>
+  <%= f.text_field :name %><br>
+  <%= f.label :station_id %>:<br>
+  <%= f.collection_check_boxes :station_ids, @stations, :id, :name %><br>
+  <%= f.submit %>
+<% end %>
