@@ -1,0 +1,11 @@
+<%= render "util/nav"%>
+<h1>The <%=@line.name%> Train</h1>
+<ul>
+  <%@line.stations.each do |station|%>
+    <li><%= link_to station.name, station%></li>
+  <%end%>
+</ul>
+
+
+<%= link_to "All lines", lines_path %>
+<%= link_to "Edit this line", edit_line_path %>

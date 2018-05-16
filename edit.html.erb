@@ -1,0 +1,7 @@
+<%= render "util/nav"%>
+<h1>Edit Line</h1>
+<%= render "form" %>
+
+<%= form_tag line_path(@line), method: "DELETE" do %>
+  <%= submit_tag "Delete Line"%>
+<%end%>
